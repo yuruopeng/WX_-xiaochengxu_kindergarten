@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "mp-tabbar": "../user/user"
+  },
+  "navigationBarTitleText": "个人中心"
+}

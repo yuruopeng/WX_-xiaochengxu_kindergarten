@@ -1,0 +1,42 @@
+<!--pages/kindergarten/kindergarten.wxml-->
+<view class="one">
+
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" width="355" height="150"/>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="a">
+    <button>模块</button>
+  </view>
+  <view class="a">
+    <button>模块</button>
+  </view>
+
+  <view class="page__bd">
+    <view class="weui-tabbar">
+      <view class="weui-tabbar__item"> <!--  weui-bar__item_on -->
+              <view style="position: relative;display:inline-block;">
+                <image src="" class="weui-tabbar__icon"></image>
+              </view>
+              <view class="weui-tabbar__label" bindtap="signup">报名</view>
+      </view>
+      <view class="weui-tabbar__item"> <!--  weui-bar__item_on -->
+              <view style="position: relative;display:inline-block;">
+                <image src="" class="weui-tabbar__icon"></image>
+              </view>
+              <view class="weui-tabbar__label" bindtap="upload">上传</view>
+      </view>
+      <view class="weui-tabbar__item">
+              <view style="position: relative;display:inline-block;">
+                <image src="" class="weui-tabbar__icon"></image>
+              </view>
+              <view class="weui-tabbar__label" bindtap="userCenter">个人中心</view>
+      </view>
+    </view>
+  </view>
+
+</view>

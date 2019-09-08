@@ -1,0 +1,53 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+
+  <view class="a" bindtap="golog">幼儿园基地</view>
+  
+<!-- 搜索框 -->
+  <view class="page">
+    <view class="page_bd">
+      <view class="weui-search-bar">
+        <view class="weui-search-bar__form">
+          <view class="weui-search-bar__box">
+            <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+            <input type="text" class="weui-search-bar__input" placeholder="请输入您要搜索的内容" maxlength='15' value="{{inputVal}}"  bindinput="inputTyping"/>
+          </view>
+        </view>
+        <view class="weui-search-bar__cancel-btn" bindtap="searchInput">搜索</view>
+        <view class="weui-search-bar__cancel-btn" bindtap="hideInput">取消</view>
+      </view>
+      <view class="weui-cells searchbar-result" wx:if="{{list != null}}">
+        <!-- 搜索列表 -->
+        <view class="weui-cell__bd" wx:for="{{list}}" wx:for-item="list" wx:for-index="index" wx:key="key">
+          <!-- 列表名称 -->
+          <view class='list_name'  data-index='{{index}}' data-id='{{list.id}}'
+            data-name='{{list.username}}' bindtap='btn_name'>
+            <!-- 昵称 -->
+            {{list.id}}:{{list.username}}--{{list.password}}  {{list.create_time}}
+          </view>
+        </view>
+      </view>
+
+      <view class="weui-cells searchbar-result" wx:if="{{selectAll != null}}">
+        <!-- 搜索列表 -->
+        <view class="weui-cell__bd" wx:for="{{selectAll}}" wx:for-item="list" wx:for-index="index" wx:key="key">
+          <!-- 列表名称 -->
+          <view class='list_name'  data-index='{{index}}' data-id='{{list.id}}'
+            data-name='{{list.username}}' bindtap='btn_name'>
+            <!-- 昵称 -->
+            {{list.id}}:{{list.username}}--{{list.password}}  {{list.create_time}}
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+</view>

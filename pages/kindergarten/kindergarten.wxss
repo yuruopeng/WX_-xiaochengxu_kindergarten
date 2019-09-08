@@ -1,0 +1,24 @@
+/* pages/kindergarten/kindergarten.wxss */
+page{
+  background-color: #fef2dc;
+}
+.one{
+  
+}
+
+.a{
+  height: 200rpx;
+  width: 40%;
+  padding-top: 100rpx;
+  padding-bottom: 100rpx;
+  padding-left: 30%;
+  padding-right: 30%;
+  text-align: center;
+}
+
+.weui-tabbar{
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+}

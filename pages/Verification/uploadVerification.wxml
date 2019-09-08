@@ -1,0 +1,23 @@
+<!--pages/uploadVerification/uploadVerification.wxml-->
+<text>pages/uploadVerification/uploadVerification.wxml</text>
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="section">
+    <view class="section__title">username</view>
+    <input name="username" placeholder="username" />
+  </view>
+  <view class="section">
+    <view class="section__title">password</view>
+    <input name="password" placeholder="password" />
+  </view>
+  <view class="section">
+    <view class="section__title">手机号</view>
+    <input name="phone" placeholder="手机号" />
+  </view>
+  <view class="btn-area">
+    <button formType="submit">提交</button>
+    <button formType="reset">重置</button>
+  </view>
+</form>
+<view wx:if="{{isSubmit}}">
+  {{warn ? warn : "，手机号："+phone+"，用户名："+username+"，password："+password}}
+</view>

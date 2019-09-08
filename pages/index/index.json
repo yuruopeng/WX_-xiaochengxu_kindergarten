@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "mp-searchbar": "../index/index"
+  },
+  "navigationBarTitleText": "首页"
+}
